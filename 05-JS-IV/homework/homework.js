@@ -160,7 +160,7 @@ function agregarMetodoCalculoDescuento(producto) {
     producto.calcularPrecioDescuento = function() { // Aparentemente de esta manera podemos asignarle
       return this.precio - (this.precio * this.porcentajeDeDescuento); //  una funcion al valor calcularpreciodescuento
     };                                              // del objeto producto, y usando el this que se refiere a valores dentro
-    return producto;                                // del objeto, realizar la tarea que se nos requiere. El descuento.
+    return producto ;                                // del objeto, realizar la tarea que se nos requiere. El descuento.
 }
 
 // No modificar nada debajo de esta línea
