@@ -23,9 +23,9 @@ function agregarPropiedad(objeto, property) {
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento
   // llamado "property" (una cadena/string)
   // Tu código:
-  objeto[property] = null;
-   return objeto; 
-
+  objeto[property] = null; // Usamos [] para llamar a property y no un punto porque con el punto
+   return objeto;          // estaria buscando una key llamada property y como dice en la nota
+                           // el nombre de la propiedad no es property . Por eso al usar [] funciona y busca el valor y le asigna null 
 
 }
 
@@ -34,8 +34,8 @@ function invocarMetodo(objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-  objeto[metodo]();
-}
+  objeto[metodo](); // con el parentesis () invocamos la funcion (metodo)
+}                   // dentro de metodo en objeto
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
@@ -73,8 +73,8 @@ function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-  if (usuario['email']) {
-    return true;
+  if (usuario['email']) { // de esta manera preguntamos, si hay algo en email proceda
+    return true;          // a devolver true, si no,  false
   } return false;
 }
 
@@ -160,7 +160,7 @@ function agregarMetodoCalculoDescuento(producto) {
     producto.calcularPrecioDescuento = function() { // Aparentemente de esta manera podemos asignarle
       return this.precio - (this.precio * this.porcentajeDeDescuento); //  una funcion al valor calcularpreciodescuento
     };                                              // del objeto producto, y usando el this que se refiere a valores dentro
-    return  producto ;                                // del objeto, realizar la tarea que se nos requiere. El descuento.
+    return producto ;                                // del objeto, realizar la tarea que se nos requiere. El descuento.
 }
 
 // No modificar nada debajo de esta línea
